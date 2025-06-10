@@ -3,12 +3,12 @@ import About from './Components/About';
 import Navbar from './Components/Navbar';
 import TextArea from './Components/TextArea';
 import Alerts from './Components/Alerts';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-}from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link
+// }from "react-router-dom";
 function App() {
   const [mode, setMode] = useState(`light`); // weather dark mood is enabled or not
   const [alert, setAlert] = useState(null);
@@ -63,19 +63,19 @@ function App() {
     }
   }
   return <>
-  <Router>
+  {/* <Router> */}
   <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} greenMode={greenMode} blueMode={blueMode}/>
   <Alerts alert={alert}/>
   <div className='conatiner my-3'>
-    <Switch>
-      <Route path='/about'><About/>
-     </Route>
-     <Route path='/'>
+    {/* <Switch> */}
+      {/* <Route path='/about'><About/> */}
+     {/* </Route> */}
+     {/* <Route path='/'> */}
        <TextArea showAlert={showAlert} heading="Enter the text to analyze below" mode={mode}/>
-     </Route>
-    </Switch>
+     {/* </Route> */}
+    {/* </Switch> */}
   </div>
-    </Router>
+    {/* </Router> */}
   </>
 }
 
